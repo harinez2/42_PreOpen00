@@ -6,7 +6,7 @@
 #    By: yonishi <yonishi@student.42tokyo.j>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/03 15:10:09 by yonishi           #+#    #+#              #
-#    Updated: 2021/02/03 15:25:46 by yonishi          ###   ########.fr        #
+#    Updated: 2021/02/03 15:27:24 by yonishi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,7 +31,7 @@ d = {}
 for value, key in data:
     d[key] = value
 
-for key in d.keys():
+for key, value in d.items():
     if len(str(key)) == 1:
         print(' ', end='')
-    print(key, ':', d[key])
+    print(key, ':', value)
