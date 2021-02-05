@@ -6,7 +6,7 @@
 #    By: yonishi <yonishi@student.42tokyo.j>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/03 17:52:15 by yonishi           #+#    #+#              #
-#    Updated: 2021/02/03 21:17:50 by yonishi          ###   ########.fr        #
+#    Updated: 2021/02/05 22:40:36 by yonishi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,11 +19,7 @@ html_head = """\
     <head>
     <meta charset="utf-8">
 
-    <title>The HTML5 Herald</title>
-    <meta name="description" content="The HTML5 Herald">
-    <meta name="author" content="SitePoint">
-
-    <link rel="stylesheet" href="css/styles.css?v=1.0">
+    <title>The Periodic Table</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
@@ -35,7 +31,6 @@ html_head = """\
     </head>
 
     <body>
-        <script src="js/scripts.js"></script>
 """
 
 html_tail = """\
@@ -65,11 +60,11 @@ for i in range(7):
     for j in range(18):
         if int(d[str(idx)]['position']) == j:
             data += '    <td>' \
-                    + '<h5>' + str(idx) + '</h5>' \
+                    + '<h4>' + str(idx) + '</h4>' \
                     + '<h1 style="font-size: 56px">' + d[str(idx)]['short'] + '</h1>' \
-                    + '<p>' + d[str(idx)]['name'] + '<br>' \
-                    + 'mol: ' + d[str(idx)]['mol'] + '<br>' \
-                    + 'elec.: ' + d[str(idx)]['electron'] + '</p>' \
+                    + '<ul><li>' + d[str(idx)]['name'] + '</li>' \
+                    + '<li>mol: ' + d[str(idx)]['mol'] + '</li>' \
+                    + '<li>elec.: ' + d[str(idx)]['electron'] + '</li></ul>' \
                     + '</td>\n'
             if idx == 56:
                 idx = 72
